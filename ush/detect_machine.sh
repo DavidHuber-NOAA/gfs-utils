@@ -9,6 +9,8 @@ case $(hostname -f) in
   dlogin0[1-9].dogwood.wcoss2.ncep.noaa.gov) MACHINE_ID=wcoss2 ;; ### dogwood01-9
   dlogin10.dogwood.wcoss2.ncep.noaa.gov)     MACHINE_ID=wcoss2 ;; ### dogwood10
 
+  slurm-noaa-fv3-login0.c.noaa-leap-gfs-sandbox.internal) MACHINE_ID=gcp ;;
+
   gaea9)               MACHINE_ID=gaea ;; ### gaea9
   gaea1[0-6])          MACHINE_ID=gaea ;; ### gaea10-16
   gaea9.ncrc.gov)      MACHINE_ID=gaea ;; ### gaea9

@@ -17,6 +17,14 @@ elif [[ $MACHINE_ID = hera* ]] ; then
     export LMOD_SYSTEM_DEFAULT_MODULES=contrib
     module reset
 
+elif [[ $MACHINE_ID = gcp* ]] ; then
+    # We are on GCP
+    if ( ! eval module help > /dev/null 2>&1 ) ; then
+        source /usr/share/lmod/lmod/init/bash
+    fi
+    export LMOD_SYSTEM_DEFAULT_MODULES=git
+    module reset
+
 elif [[ $MACHINE_ID = orion* ]] ; then
     # We are on Orion
     if ( ! eval module help > /dev/null 2>&1 ) ; then
