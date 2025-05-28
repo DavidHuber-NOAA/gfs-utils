@@ -25,6 +25,7 @@ endif()
 
 # User options.
 option(OPENMP "use OpenMP threading" ON)
+option(LINK_W3EMC "Link w3emc library" ON)
 
 # Find packages.
 find_package(MPI REQUIRED)
@@ -66,6 +67,3 @@ endif()
 
 # Build and install code.
 add_subdirectory(src)
-
-# Install utility scripts.
-add_subdirectory(ush)

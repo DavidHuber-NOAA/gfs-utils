@@ -52,6 +52,13 @@ elif [[ $MACHINE_ID = cheyenne* ]] ; then
     fi
     module purge
 
+elif [[ $MACHINE_ID = container ]] ; then
+    # We are in a container
+    if ( ! eval module help > /dev/null 2>&1 ) ; then
+        source /usr/lmod/lmod/init/bash
+    fi
+    module purge
+
 elif [[ $MACHINE_ID = stampede* ]] ; then
     # We are on TACC Stampede
     if ( ! eval module help > /dev/null 2>&1 ) ; then
@@ -85,6 +92,11 @@ elif [[ $MACHINE_ID = discover* ]]; then
     export PATH=$PATH:$SPACK_ROOT/bin
     . $SPACK_ROOT/share/spack/setup-env.sh
 
+elif [[ ${MACHINE_ID} = noaacloud ]] ; then
+    # We are on NOAA Cloud
+    module purge
+
 else
     echo WARNING: UNKNOWN PLATFORM 1>&2
+
 fi

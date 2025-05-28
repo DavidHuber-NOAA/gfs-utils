@@ -2,9 +2,7 @@ help([[
 Build environment for GFS utilities on Hera
 ]])
 
---Compiler and MPI versions
-stack_intel_ver=os.getenv("stack_intel_ver") or "2021.5.0"
-stack_impi_ver=os.getenv("stack_impi_ver") or "2021.5.1"
+prepend_path("MODULEPATH", "/contrib/spack-stack/spack-stack-1.6.0/envs/gsi-addon-dev-rocky8/install/modulefiles/Core")
 
 --Spack-stack root path and environment name
 stack_root=os.getenv("stack_root") or "/contrib/spack-stack"
