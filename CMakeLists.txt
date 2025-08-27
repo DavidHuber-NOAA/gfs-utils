@@ -64,5 +64,11 @@ elseif(CMAKE_Fortran_COMPILER_ID MATCHES "^(GNU)$")
   set(CMAKE_Fortran_FLAGS_DEBUG "-O0 -ggdb -fno-unsafe-math-optimizations -frounding-math -fsignaling-nans -ffpe-trap=invalid,zero,overflow -fbounds-check")
 endif()
 
+# Enable testing framework
+enable_testing()
+
 # Build and install code.
 add_subdirectory(src)
+
+# Add tests
+add_subdirectory(tests)
