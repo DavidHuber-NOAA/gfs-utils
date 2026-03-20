@@ -14,6 +14,7 @@ add_subdirectory(tref_calc.fd)
 
 add_subdirectory(mkgfsawps.fd)
 add_subdirectory(overgridid.fd)
+add_subdirectory(mpiserial.fd)
 if (gempak_FOUND AND gfortran_FOUND)
   add_subdirectory(rdbfmsua.fd)
 else()
